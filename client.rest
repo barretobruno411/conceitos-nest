@@ -1,0 +1,56 @@
+@baseUrl = http://localhost:3000
+
+### AppControllerGetHello
+
+# @name AppControllerGetHello
+GET {{baseUrl}}/home/hello
+
+### ExemploDeRota
+GET {{baseUrl}}/home/exemplo/
+
+### ConceitoManualController HOME
+
+# @name ConceitoManualControllerHome
+GET {{baseUrl}}/conceitos-manual
+
+
+### ConceitosAutomaticoController HOME
+GET {{baseUrl}}/conceitos-automatico
+
+### SolucionaExemplo
+GET {{baseUrl}}/home/exemplo
+
+### SolucionaHome
+# @name SolucionaHome
+GET {{baseUrl}}/conceitos-manual
+
+### TODOS os recados
+# @name Recados
+GET {{baseUrl}}/recados
+?limit=100
+&offset=102
+
+### UM recado
+# @name UmRecado
+GET {{baseUrl}}/recados/2
+
+###
+POST {{baseUrl}}/recados
+Content-Type: application/json
+
+{
+    "texto": "4 NOVO Recado",
+    "de": "Joana",
+    "para": "João"
+}
+
+### Atualiza um recado
+PATCH {{baseUrl}}/recados/2
+Content-Type: application/json
+
+{
+    "lido": true
+}
+
+### Remove um cadastro
+DELETE {{baseUrl}}/recados/1
