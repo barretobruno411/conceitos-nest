@@ -53,4 +53,4 @@ Content-Type: application/json
 }
 
 ### Remove um cadastro
-DELETE {{baseUrl}}/recados/1
+DELETE {{baseUrl}}/recados/3
