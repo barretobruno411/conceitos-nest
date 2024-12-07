@@ -27,8 +27,8 @@ GET {{baseUrl}}/conceitos-manual
 ### TODOS os recados
 # @name Recados
 GET {{baseUrl}}/recados
-?limit=100
-&offset=102
+?limit=10
+&offset=0
 
 ### UM recado
 # @name UmRecado
@@ -45,14 +45,13 @@ Content-Type: application/json
 }
 
 ### Atualiza um recado
-PATCH {{baseUrl}}/recados/5
+PATCH {{baseUrl}}/recados/7
 Content-Type: application/json
 
 {
-    "lido": true,
-    "texto": "vai dar tudo certo, em nome de Jesus. Pois ele esta no controle."
+    "lido": false,
+    "texto": "deu certo"
 }
-
 ### Remove um cadastro
 DELETE {{baseUrl}}/recados/
 
