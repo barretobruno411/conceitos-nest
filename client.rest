@@ -39,18 +39,47 @@ POST {{baseUrl}}/recados
 Content-Type: application/json
 
 {
-    "texto": "4 NOVO Recado",
-    "de": "Joana",
-    "para": "João"
+    "texto": "Tambem amo muito",
+    "deId": 1,
+    "paraId": 3
 }
 
 ### Atualiza um recado
-PATCH {{baseUrl}}/recados/2
+PATCH {{baseUrl}}/recados/5
 Content-Type: application/json
 
 {
-    "lido": true
+    "lido": true,
+    "texto": "vai dar tudo certo, em nome de Jesus. Pois ele esta no controle."
 }
 
 ### Remove um cadastro
-DELETE {{baseUrl}}/recados/3
+DELETE {{baseUrl}}/recados/
+
+### Criar uma pessoa
+POST {{baseUrl}}/pessoas
+Content-Type: application/json
+
+{
+    "nome": "Bruno",
+    "email": "bruno@mail.com",
+    "password":"lerolerolero"
+}
+
+### Buscar todas as pessoas
+GET {{baseUrl}}/pessoas
+
+### Busca uma pessoa pelo id
+GET {{baseUrl}}/pessoas/2
+
+### Remove uma pessoa
+DELETE {{baseUrl}}/pessoas/2
+
+### Atualiza uma pessoa
+PATCH {{baseUrl}}/pessoas/3
+Content-Type: application/json
+
+{
+    "password":"bilulilu"
+}
+
